@@ -87,7 +87,7 @@ public class ERC1155: IERC1155 {
             }.wait()
     }
     
-    func safeTransferFrom(from: EthereumAddress, to: EthereumAddress, originalOwner: EthereumAddress, id: BigUInt, value: BigUInt, data: [UInt8]) throws -> WriteTransaction {
+    public func safeTransferFrom(from: EthereumAddress, to: EthereumAddress, originalOwner: EthereumAddress, id: BigUInt, value: BigUInt, data: [UInt8]) throws -> WriteTransaction {
         let contract = self.contract
         var basicOptions = TransactionOptions()
         basicOptions.from = from
